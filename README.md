@@ -25,3 +25,9 @@ Once you have finished running the examples you can stop the server again by run
 ```bash
 docker-compose down
 ```
+
+## Other useful links
+
+[What the heck is oauth](https://developer.okta.com/blog/2017/06/21/what-the-heck-is-oauth)
+[What is the oauth2 password grant](https://developer.okta.com/blog/2018/06/29/what-is-the-oauth2-password-grant)
+[An illustrated guide to oauth and openid connect](https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc)
