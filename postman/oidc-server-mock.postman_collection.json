@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "b8e6ee57-5644-4f64-914e-4250d088ad47",
+		"name": "oidc-server-mock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "implicit-grant-type",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "mobile-app-scope-1",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "mobile-app-id",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://mobile-api:3000/auth/oidc",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:4011/connect/authorize",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "implicit",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "implicit-grant-token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "client-credentials-grant-type",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "view-invoices",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "abc-123",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "data-api-id",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "client-credentials-grant-token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:4011/connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:4011/connect/authorize",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:3000/auth/oidc",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "auth-code-grant-type",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientId",
+							"value": "app-api-id",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "xyz-789",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://app-api/auth",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile email",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "auth-code-grant-token",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:4011/connect/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://localhost:4011/connect/authorize",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "mobile-app",
+    "Scopes": ["mobile-app-scope-1","mobile-app-scope-2"]
+  },
+  {
+    "Name": "data-api",
+    "Scopes": ["view-invoices","pay-invoices"]
+  }
+]

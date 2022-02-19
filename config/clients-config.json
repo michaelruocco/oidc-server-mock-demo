@@ -1,0 +1,66 @@
+[
+  {
+    "Description": "Client for implicit flow",
+    "ClientId": "mobile-app-id",
+    "AllowedGrantTypes": [
+      "implicit"
+    ],
+    "AllowAccessTokensViaBrowser": true,
+    "RedirectUris": [
+      "http://mobile-api:3000/auth/oidc"
+    ],
+    "AllowedScopes": [
+      "mobile-app-scope-1",
+      "mobile-app-scope-2"
+    ],
+    "IdentityTokenLifetime": 3600,
+    "AccessTokenLifetime": 3600
+  },
+  {
+    "Description": "Client for client credentials flow",
+    "ClientId": "data-api-id",
+    "ClientSecrets": [
+      "abc-123"
+    ],
+    "AllowedGrantTypes": [
+      "client_credentials"
+    ],
+    "AllowedScopes": [
+      "view-invoices",
+      "pay-invoices"
+    ],
+    "ClientClaimsPrefix": "data_",
+    "Claims": [
+      {
+        "Type": "is_admin",
+        "Value": "true"
+      },
+      {
+        "Type": "auth_limits",
+        "Value": "[100, 500]",
+        "ValueType": "json"
+      }
+    ]
+  },
+  {
+    "Description": "Client for authorization code flow",
+    "ClientId": "app-api-id",
+    "ClientSecrets": [
+      "xyz-789"
+    ],
+    "AllowedGrantTypes": [
+      "authorization_code"
+    ],
+    "RedirectUris": [
+      "http://app-api/auth"
+    ],
+    "AllowedScopes": [
+      "openid",
+      "profile",
+      "email"
+    ],
+    "IdentityTokenLifetime": 3600,
+    "AccessTokenLifetime": 3600,
+    "RequirePkce": "false"
+  }
+]

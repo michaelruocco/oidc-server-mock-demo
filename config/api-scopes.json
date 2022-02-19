@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "mobile-app-scope-1"
+  },
+  {
+    "Name": "mobile-app-scope-2"
+  },
+  {
+    "Name": "view-invoices"
+  },
+  {
+    "Name": "pay-invoices"
+  }
+]

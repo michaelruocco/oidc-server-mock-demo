@@ -1,0 +1,17 @@
+version: '3'
+services:
+  oidc-server-mock:
+    container_name: oidc-server-mock
+    image: ghcr.io/soluto/oidc-server-mock:latest
+    ports:
+      - "4011:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      SERVER_OPTIONS_PATH: /tmp/config/server-options.json
+      ACCOUNT_OPTIONS_PATH: /tmp/config/account-options.json
+      API_SCOPES_PATH: /tmp/config/api-scopes.json
+      API_RESOURCES_PATH: /tmp/config/api-resources.json
+      USERS_CONFIGURATION_PATH: /tmp/config/users-config.json
+      CLIENTS_CONFIGURATION_PATH: /tmp/config/clients-config.json
+    volumes:
+      - ./config:/tmp/config:ro

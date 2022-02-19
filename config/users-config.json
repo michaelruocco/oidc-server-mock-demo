@@ -1,0 +1,40 @@
+[
+  {
+    "SubjectId":"1",
+    "Username":"tyebo",
+    "Password":"welcome01",
+    "Claims": [
+      {
+        "Type": "name",
+        "Value": "Tony Yeboah"
+      },
+      {
+        "Type": "email",
+        "Value": "tony.yeboah@gmail.com"
+      },
+      {
+        "Type": "email_verified",
+        "Value": true
+      }
+    ]
+  },
+  {
+    "SubjectId":"2",
+    "Username":"rwall",
+    "Password":"welcome02",
+    "Claims": [
+      {
+        "Type": "name",
+        "Value": "Rodney Wallace"
+      },
+      {
+        "Type": "email",
+        "Value": "rodney.wallace@hotmail.com"
+      },
+      {
+        "Type": "email_verified",
+        "Value": false
+      }
+    ]
+  }
+]
